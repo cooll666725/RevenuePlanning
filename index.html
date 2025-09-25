@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Planning & Funding</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Revenue Planning & Funding</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="problem.html">Problem</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="expansion.html">Expansion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Homepage Content -->
+    <div class="homepage">
+        <section class="slideshow-container">
+            <!-- Slides will go here -->
+            <div class="slide" data-order="1">
+                <img src="RevenuePlaningStockTwo.png" alt="Revenue Meeting 1">
+                <div class="caption">Team discussing Q3 funding projections - Key takeaways from the meeting</div>
+            </div>
+            <div class="slide" data-order="2">
+                <img src="RevenuePlaningStockOne.png" alt="Financial Planning 2">
+                <div class="caption">Strategic financial planning session - Identifying revenue opportunities</div>
+            </div>
+            <!-- Add more slides here -->
+        </section>
+
+        <!-- Slideshow buttons container -->
+        <div class="slideshow-buttons">
+            <button class="arrow" id="prevArrow"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow" id="nextArrow"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Dots container -->
+        <div class="dots" id="dotsContainer">
+            <!-- Dots will be added here by JavaScript -->
+        </div>
+    </div>
+
+        <section class="featured-section">
+            <!-- Feature Tiles -->
+            <div class="feature-tile" data-link="problem.html"><a href="problem.html">
+                <i class="fas fa-exclamation-triangle icon"></i>
+                <h3>The Problem</h3>
+                <p>We identify critical funding gaps in park and recreation systems.</p>
+            </div></a>
+            <div class="feature-tile" data-link="solutions.html"><a href="solutions.html">
+                <i class="fas fa-lightbulb icon"></i></a>
+                <h3>Our Solutions</h3>
+                <p>Innovative revenue strategies to sustain your programs and facilities.</p>
+            </div>
+            <div class="feature-tile" data-link="services.html">
+                <i class="fas fa-handshake icon"></i>
+                <a href="services.html"><h3>Our Services</h3>
+                <p>Customized planning, grant writing, and funding solutions for your needs.</p></a>
+            </div>
+        </section>
+
+<!-- Featured Text -->
+<div class="Bodytext">
+  <h1 style="text-align: center;">Creating Innovative Park and Recreation Revenue Systems</h1></div>
+  <div class="body">
+  <ul style="text-align: center;">
+    <li><p>Capital Improvements Revenue Plans</p></li>
+    <li><p>Grants Funding Expertise</p></li>
+    <li><p>Pooled Talent Solutions for Large Projects</p></li>
+  </ul></div>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="dollar-sign">$$$</div>
+        <p>&copy; 2025 Revenue Planning & Funding, LLC</p>
+        <p>(386) 454-1982 | shemphill@leisurerevenues.com</p>
+        <p>531 S.W. Mapleton St, Fort White, Florida 32038</p>
+    </footer>
+
+    <script>
+        // Initialize slideshow
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentSlide = 0;
+
+        // Show the first slide
+        slides[currentSlide].classList.add('active');
+
+        // Create dot buttons
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === currentSlide) {
+                dot.classList.add('active');
+            }
+            dotsContainer.appendChild(dot);
+        }
+
+        // Function to show a slide
+        function showSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            // Hide all captions
+            document.querySelectorAll('.caption').forEach(cap => cap.style.opacity = 0);
+
+            // Show the selected slide and its caption
+            slides[index].classList.add('active');
+            document.querySelector(`.slide[data-order="${index + 1}"] .caption`).style.opacity = 1;
+
+            // Update active dot
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide function
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Previous slide function
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Dot click event
+        dotsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('dot')) {
+                const index = Array.from(document.querySelectorAll('.dot')).indexOf(event.target);
+                showSlide(index);
+            }
+        });
+
+        // Initialize event listeners
+        document.getElementById('nextArrow').addEventListener('click', nextSlide);
+        document.getElementById('prevArrow').addEventListener('click', prevSlide);
+
+        // Optional: Add a timer to automatically advance slides
+        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+    <!-- Font Awesome for icons (include in your HTML or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+	
+</body>
+</html>
