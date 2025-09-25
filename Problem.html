@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Planning & Funding</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Problem</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="problem.html">Problem</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="expansion.html">Expansion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Content -->
+
+
+<!-- Featured Text -->
+<div class="Bodytext">
+  <h1 style="text-align: center;">This is where we can put your Problem description</h1></div>
+  <div class="body">
+  <ul style="text-align: center;">
+    <li><p>Just let me know what needs to be put here</p></li>
+    <li><p>Or in here</p></li>
+    <li><p>Or even here</p></li>
+  </ul></div>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="dollar-sign">$$$</div>
+        <p>&copy; 2025 Revenue Planning & Funding, LLC</p>
+        <p>(386) 454-1982 | shemphill@leisurerevenues.com</p>
+        <p>531 S.W. Mapleton St, Fort White, Florida 32038</p>
+    </footer>
+
+    <script>
+        // Initialize slideshow
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentSlide = 0;
+
+        // Show the first slide
+        slides[currentSlide].classList.add('active');
+
+        // Create dot buttons
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === currentSlide) {
+                dot.classList.add('active');
+            }
+            dotsContainer.appendChild(dot);
+        }
+
+        // Function to show a slide
+        function showSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            // Hide all captions
+            document.querySelectorAll('.caption').forEach(cap => cap.style.opacity = 0);
+
+            // Show the selected slide and its caption
+            slides[index].classList.add('active');
+            document.querySelector(`.slide[data-order="${index + 1}"] .caption`).style.opacity = 1;
+
+            // Update active dot
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide function
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Previous slide function
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Dot click event
+        dotsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('dot')) {
+                const index = Array.from(document.querySelectorAll('.dot')).indexOf(event.target);
+                showSlide(index);
+            }
+        });
+
+        // Initialize event listeners
+        document.getElementById('nextArrow').addEventListener('click', nextSlide);
+        document.getElementById('prevArrow').addEventListener('click', prevSlide);
+
+        // Optional: Add a timer to automatically advance slides
+        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+    <!-- Font Awesome for icons (include in your HTML or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+	
+</body>
+</html>
