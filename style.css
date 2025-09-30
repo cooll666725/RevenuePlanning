@@ -230,7 +230,7 @@ footer {
 }
 /* ----- Page / Word-like layout ----- */
     :root {
-      --page-width: 8.5in;
+      --page-width: 9.5in;
       --page-height: 11in;
       --margin: 1in;           /* typical Word default */
       --font-size: 10pt;       /* requested size */
@@ -309,4 +309,5 @@ footer {
         padding: 1in;
       }
     }
+
 
