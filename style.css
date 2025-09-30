@@ -22,14 +22,14 @@ header {
 
 header h1 {
   margin: 0;
-  color: #2D7659; /* Green color */
+  color: #4CAF50; /* Green color */
   font-weight: 600;
   text-align: center;
   font-size: 2.5rem;
 }
 
 nav {
-  background-color: #2D7659; /* Deep forest green */
+  background-color: #4CAF50; /* Deep forest green */
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -154,7 +154,7 @@ nav a:hover {
 }
 
 .dot.active {
-  background-color: #2D7659; /* Green color */
+  background-color: #4CAF50; /* Green color */
 }
 
 .featured-section {
@@ -226,4 +226,5 @@ footer {
   .feature-tile {
     width: 100%;
   }
+
 }
