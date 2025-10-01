@@ -276,7 +276,7 @@ footer {
       margin-top: 0.3in;
     }
 
-    pt {
+    p {
       margin: 0 0 0.14in 0;   /* compact Word-like spacing */
       text-indent: var(--para-indent);
       white-space: pre-wrap;  /* preserves the “soft hyphenation-like” breaks if present */
@@ -312,6 +312,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
