@@ -200,7 +200,6 @@ nav a:hover {
 footer {
   background-color: #f8f9fa;
   text-align: center;
-  padding: 2px 2px;
   border-top: 1px solid #eaeaea;
 }
 
@@ -312,6 +311,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
