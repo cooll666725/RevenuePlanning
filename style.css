@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: 1.0;
   color: #333;
   background-color: white;
 }
@@ -57,7 +57,7 @@ nav a:hover {
 
 /* Homepage Styling */
 .homepage {
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Slideshow styling - added more details */
@@ -311,6 +311,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
