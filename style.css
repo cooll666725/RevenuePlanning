@@ -192,7 +192,7 @@ nav a:hover {
 
 /* Page Content Styling */
 .page-content {
-  padding: 40px;
+  padding: 0px;
   text-align: justify;
 }
 
@@ -312,6 +312,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
