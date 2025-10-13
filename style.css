@@ -300,6 +300,17 @@ footer {
       text-transform: none; /* small-caps handles casing */
     }
 
+.star-list {
+  list-style: none;            /* remove default bullets */
+  padding-left: 1.2em;         /* indent list items slightly */
+}
+
+.star-list li::before {
+  content: "* ";               /* or use "★" if you prefer */
+  color: #000;                 /* change color if you like */
+  font-weight: bold;
+}
+
     /* Print support: keep the Word-like page on paper */
     @media print {
       body { background: #fff; }
@@ -311,6 +322,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
