@@ -30,31 +30,48 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* NAVIGATION BAR */
 nav {
-  background-color: #4CAF50; /* Deep forest green */
+  background-color: #4CAF50; /* green background */
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* FLEX MENU */
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;          /* allows wrapping on smaller screens */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* NAV ITEMS */
 nav li {
-  margin: 0 20px;
+  margin: 8px 16px;
 }
 
+/* NAV LINKS */
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent; /* reserved for active underline */
 }
 
+/* HOVER EFFECT */
 nav a:hover {
-  color: #eee;
+  color: #004225;            /* darker green text for contrast */
+  background-color: #A7E9AF; /* light green background */
+  border-radius: 4px;
+}
+
+/* ACTIVE PAGE UNDERLINE */
+nav a.active {
+  border-bottom: 3px solid #fff; /* white underline for current page */
 }
 
 /* Homepage Styling */
@@ -229,7 +246,13 @@ footer {
   .feature-tile {
     width: 100%;
   }
-
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    margin: 10px 0;
+  }
 }
 /* ----- Page / Word-like layout ----- */
     :root {
@@ -335,6 +358,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
