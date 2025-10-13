@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Planning & Funding</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>REVENUE PLANNING & FUNDING, LLC (RPF)</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="problem.html">Problem</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="expansion.html">Expansion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Content -->
+
+
+	<bodyt>
+<!-- Featured Text -->
+<main class="page" role="main" aria-label="Innovative Services RPF">
+  <p>&nbsp;</p>
+  <h1 style="text-align: center;">REVENUE PLANNING &amp; FUNDING, LLC</h1>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <h2 style="text-align: center;">INNOVATIVE SERVICES</h2>
+
+  <p style="text-indent: 30px;">
+    Revenue Planning &amp; Funding, LLC can provide the three (3) following types of Services to public and non profit park and recreation entities to enhance their large scale Site Plans, Facility Plans and Systemwide Master Plans that recommend costly Acquisition and Development pro-jects.
+  </p>
+  <p>&nbsp;</p>
+
+  <ul style="margin-left: 15px;">
+    <li><p>Prepare in-depth Capital Improvements Revenue Plans that accompany and complement large scale Site, Facility and Master Plans.</p></li>
+    <li><p>Pursue and obtain large scale Grant Funding Revenues through Block Grants, Categorical Grants and/or Legislative Grants to help fulfill the Site Plans, Facility Plans and Master Plans.</p></li>
+    <li><p>Mobilize pooled talent Revenue Personnel to help fund the Site, Facility and Master Plans.</p></li>
+  </ul>
+  <p>&nbsp;</p>
+
+  <p style="text-indent: 30px;">
+    These essential Services can be provided to strengthen, fund and team a Site Plan, Facility Plan or a Master Plan through twenty (20) interrelated Tracks.
+  </p>
+  <p>&nbsp;</p>
+
+  <p style="text-align: center; font-weight: bold;">Please click on each of the three (3) following Service Types.</p>
+  <p>&nbsp;</p>
+<div id="startHere"></div>
+<!-- Buttons row -->
+<div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center;">
+  <a href="revenueplanningtracks.html"
+     style="display: inline-flex; align-items: center; justify-content: center; 
+            background: #4CAF50; color: #fff; text-decoration: none;
+            font-weight: bold; padding: 16px 20px; border-radius: 6px; 
+            width: 150px; height: 80px; text-align: center; line-height: 1.2;"   
+	        onmouseover="this.style.background='#45a049';" 
+            onmouseout="this.style.background='#4CAF50';">
+    Revenue Planning<br>Tracks (6)
+  </a>
+
+  <a href="grantsfundingtracks.html"
+     style="display: inline-flex; align-items: center; justify-content: center; 
+            background: #06380a; color: #fff; text-decoration: none;
+            font-weight: bold; padding: 16px 20px; border-radius: 6px; 
+            width: 150px; height: 80px; text-align: center; line-height: 1.2;"	        
+	        onmouseover="this.style.background='#06380a';" 
+            onmouseout="this.style.background='#06380a';">
+    Grants Funding<br>Tracks (7)
+  </a>
+
+  <a href="revenuepersonneltracks.html"
+     style="display: inline-flex; align-items: center; justify-content: center; 
+            background: #4CAF50; color: #fff; text-decoration: none;
+            font-weight: bold; padding: 16px 20px; border-radius: 6px; 
+            width: 150px; height: 80px; text-align: center; line-height: 1.2;"	        
+	        onmouseover="this.style.background='#45a049';" 
+            onmouseout="this.style.background='#4CAF50';">
+    Revenue Personnel<br>Tracks (7)
+  </a>
+</div>
+  
+  <p>&nbsp;</p>
+
+  <!-- Actual Content -->
+  
+</main>
+
+</bodyt>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+		 <p>(386) 454-1982   shemphill@leisurerevenues.com</p>
+		 <p>531 S.W. Mapleton Street    Fort White, Florida 32038</p>
+		 <p>&copy; 2025 Revenue Planning & Funding, LLC</p>
+    </footer>
+
+    <script>
+        // Initialize slideshow
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentSlide = 0;
+
+        // Show the first slide
+        slides[currentSlide].classList.add('active');
+
+        // Create dot buttons
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === currentSlide) {
+                dot.classList.add('active');
+            }
+            dotsContainer.appendChild(dot);
+        }
+
+        // Function to show a slide
+        function showSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            // Hide all captions
+            document.querySelectorAll('.caption').forEach(cap => cap.style.opacity = 0);
+
+            // Show the selected slide and its caption
+            slides[index].classList.add('active');
+            document.querySelector(`.slide[data-order="${index + 1}"] .caption`).style.opacity = 1;
+
+            // Update active dot
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide function
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Previous slide function
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Dot click event
+        dotsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('dot')) {
+                const index = Array.from(document.querySelectorAll('.dot')).indexOf(event.target);
+                showSlide(index);
+            }
+        });
+
+        // Initialize event listeners
+        document.getElementById('nextArrow').addEventListener('click', nextSlide);
+        document.getElementById('prevArrow').addEventListener('click', prevSlide);
+
+        // Optional: Add a timer to automatically advance slides
+        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+    <!-- Font Awesome for icons (include in your HTML or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+	  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('startHere').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+	
+</body>
+</html>
