@@ -285,9 +285,7 @@ footer {
       padding: var(--margin);
       background: #fff;
       box-shadow: 0 4px 24px rgba(0,0,0,.12);
-      h1, h2 {
-  text-decoration: underline;
-}
+
     }
 
     /* ----- Typography to match Word feel ----- */
@@ -306,6 +304,9 @@ footer {
       font-size: 11pt;
       margin-top: 0.3in;
     }
+     h1, h2 {
+  text-decoration: underline;
+}
 
     p {
       margin: 0 0 0.14in 0;   /* compact Word-like spacing */
@@ -371,6 +372,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
