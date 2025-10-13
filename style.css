@@ -307,6 +307,12 @@ footer {
       text-transform: none; /* small-caps handles casing */
     }
 
+.centered-section {
+  width: 60%;              /* or any width you want for the centered block */
+  margin: 0 auto;          /* centers the section itself on the page */
+  text-align: left;        /* keeps the text inside left-aligned */
+}
+
 .star-list {
   list-style: none;            /* remove default bullets */
   padding-left: 1.2em;         /* indent list items slightly */
@@ -329,6 +335,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
