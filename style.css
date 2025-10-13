@@ -329,6 +329,16 @@ footer {
       margin-bottom: 0.2in;
       text-transform: none; /* small-caps handles casing */
     }
+.columns3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+}
+
+.columns3 div {
+  flex: 1;
+}
 
 .centered-section {
   width: 60%;              /* or any width you want for the centered block */
@@ -358,6 +368,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
