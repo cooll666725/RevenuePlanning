@@ -67,7 +67,7 @@ nav li {
 
 /* NAV LINKS */
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 600;
   padding: 8px 10px;
@@ -404,6 +404,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
