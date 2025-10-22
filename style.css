@@ -35,7 +35,7 @@ header {
 
 header h1 {
   margin: 0;
-  color: #4CAF50; /* Green color */
+  color: #3A833C; /* Green color */
   font-weight: 600;
   text-align: center;
   font-size: 2.5rem;
@@ -404,6 +404,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
