@@ -387,7 +387,7 @@ footer {
 }
 
 .star-list li::before {
-  content: "* ";               /* or use "★" if you prefer */
+  content: "*  ";               /* or use "★" if you prefer */
   color: #000;                 /* change color if you like */
   font-weight: bold;
 }
@@ -404,6 +404,7 @@ footer {
         padding: 1in;
       }
     }
+
 
 
 
