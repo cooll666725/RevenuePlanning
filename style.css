@@ -326,6 +326,7 @@ footer {
       webkit-text-decoration-skip: none;
     }
      h1 {
+      color: #3A833C; /* Green color */
       text-decoration-skip-ink: none;
       webkit-text-decoration-skip: none;
      } 
@@ -454,6 +455,7 @@ ul.custom-list ul ul > li::before {
         padding: 1in;
       }
     }
+
 
 
 
